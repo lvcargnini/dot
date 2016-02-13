@@ -10,7 +10,6 @@ input [DATA_WIDTH - 1 : 0] data;
 output reg [DATA_WIDTH - 1 : 0] out;
 
 wire [DATA_WIDTH - 1 : 0] out_maxi;
-reg [N * DATA_WIDTH * 2 - 1 : 0] in;
 
 always @(posedge clock) begin
   in <= {(N * 2){data}};
