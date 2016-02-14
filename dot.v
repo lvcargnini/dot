@@ -31,13 +31,6 @@ reduce reduce_inst (
 
 parameter FLO_INST_N = UPPERLOG2(M_X_W);
 
-wire [E_W] flo_off;
-flo flo_inst (
-    .data({{(FLO_INST_N - M_X_W){1'b0}}, m_sum}),
-    .offset_i({E_W{1'b0}}),
-    .offset_o(flo_off));
-defparam flo_inst.N = FLO_INST_N;
-defparam flo_inst.E_W = E_W;
 
 
 
